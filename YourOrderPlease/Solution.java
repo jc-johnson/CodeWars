@@ -31,18 +31,23 @@ public class Solution {
         }
 
         // parse each word for the number it contains
-        for (String word : wordList) {
-            int currentInt = extractNumber(word);
+        for (int i = 0; i < wordList.size() ; i++) {
+            for (int j = i+1; j < wordList.size() ; j++) {
+                int currentInt = extractNumber(wordList.get(i));
 
-            // If you find the word containing the lowest int add the word to queue
-            if (currentInt < minimumInt) {
-                minimumInt = currentInt;
-                System.out.println("New minimum: " + minimumInt);
-                // add to front of the queue
-                solutionQueue.add(word);
-                System.out.println("Word added to queue: " + word);
+                // If you find the word containing the lowest int add the word to queue
+                if (currentInt < minimumInt) {
+                    minimumInt = currentInt;
+                    System.out.println("New minimum: " + minimumInt);
+                    // add to front of the queue
+                    solutionQueue.add(wordList.get(i));
+                    System.out.println("Word added to queue: " + wordList.get(i));
+                }
             }
         }
+
+        // hint for finding next largest number
+        // http://stackoverflow.com/questions/4656402/grabbing-the-next-biggest-number
 
         printSolutionQueue();
     }
@@ -98,7 +103,7 @@ public class Solution {
         // int test = solution.extractNumber("1000");
         // System.out.println(test);
 
-
+        solution.parseForWords("is2 Thi1s T4est 3a");
         // parseForWords();
 
 
