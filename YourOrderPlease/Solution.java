@@ -10,16 +10,8 @@ import java.util.PriorityQueue;
  */
 public class Solution {
 
-    private String inputString = "";
-    private String currentWord = "";
-    private double minimumInt = Double.POSITIVE_INFINITY;
     private List<String> wordList = new ArrayList<>();
-    private List<String> newList = new ArrayList<>();
 
-
-    public Solution() {
-
-    }
 
     public void compute(String string) {
         getWords(string);
@@ -64,9 +56,6 @@ public class Solution {
             }
         }
     }
-
-    // hint for finding next largest number
-    // http://stackoverflow.com/questions/4656402/grabbing-the-next-biggest-number
 
     private static Integer extractNumber(String string) {
 
