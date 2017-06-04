@@ -1,6 +1,8 @@
 package YourOrderPlease;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.PriorityQueue;
 
 /**
@@ -11,90 +13,92 @@ public class Solution {
     private String inputString = "";
     private String currentWord = "";
     private double minimumInt = Double.POSITIVE_INFINITY;
-    private ArrayList<String> wordList = new ArrayList<String>();
-    private static PriorityQueue<String> solutionQueue = new PriorityQueue();
+    private List<String> wordList = new ArrayList<>();
+    private List<String> newList = new ArrayList<>();
+
 
     public Solution() {
 
     }
 
-    public void parseForWords(String string) {
+    public void compute(String string) {
+        getWords(string);
+        printWordList();
+        sortList();
+        printWordList();
+
+    }
+
+    // get all words from the input string
+    public void getWords(String string) {
 
         String inputString = string;
         System.out.println(inputString);
 
         System.out.println("All words in the string: ");
+        Integer inputStringLength = inputString.split(" ").length;
+        String[] stringArray = new String[inputStringLength];
+
         // get all the words in the string
         for (String temp : inputString.split(" ")) {
-            System.out.println( temp);
+            // System.out.println( temp);
             wordList.add(temp);
         }
+    }
 
-        // parse each word for the number it contains
+    public void printWordList() {
+        System.out.println("Current Word List: ");
+        for (String word : this.wordList) {
+            System.out.println(word);
+        }
+    }
+
+    public void sortList() {
         for (int i = 0; i < wordList.size() ; i++) {
-            for (int j = i+1; j < wordList.size() ; j++) {
-                int currentInt = extractNumber(wordList.get(i));
-
-                // If you find the word containing the lowest int add the word to queue
-                if (currentInt < minimumInt) {
-                    minimumInt = currentInt;
-                    System.out.println("New minimum: " + minimumInt);
-                    // add to front of the queue
-                    solutionQueue.add(wordList.get(i));
-                    System.out.println("Word added to queue: " + wordList.get(i));
+            for (int j = 0; j < i; j++) {
+                Integer wordListI = extractNumber(wordList.get(i));
+                Integer wordListJ = extractNumber(wordList.get(j));
+                if (wordListI < wordListJ) {
+                    swap(wordList, i, j);
                 }
             }
         }
-
-        // hint for finding next largest number
-        // http://stackoverflow.com/questions/4656402/grabbing-the-next-biggest-number
-
-        printSolutionQueue();
     }
 
-    public static void printSolutionQueue() {
+    // hint for finding next largest number
+    // http://stackoverflow.com/questions/4656402/grabbing-the-next-biggest-number
 
-        System.out.println(solutionQueue);
-        for (Object string : solutionQueue) {
-            System.out.println(string);
-        }
-    }
-
-
-    public static int extractNumber(String string) {
+    private static Integer extractNumber(String string) {
 
         if (string == null || string.isEmpty()) return 0;
 
         StringBuilder stringBuilder = new StringBuilder();
-        boolean found = false;
 
         for (char c : string.toCharArray()) {
             if (Character.isDigit(c)) {
                 stringBuilder.append(c);
-                found = true;
-            } else if (found) {
-                // Stop looping if yoru already found a digit
-                break;
             }
         }
 
-        String numberInString = stringBuilder.toString();
-        int result = Integer.parseInt(numberInString);
-        System.out.println(numberInString);
+        String ourString = stringBuilder.toString();
+        Integer result = Integer.parseInt(ourString);
+        System.out.println(ourString);
 
         return result;
     }
 
+    public void swap(List<String> stringList, Integer index, Integer indexTwo) {
+        String[] stringArray = new String[stringList.size()];
+        stringList.toArray(stringArray);
 
-    // parse the string - need to clear out spaces in the string
+        String temp = stringArray[index];
+        stringArray[index] = stringArray[indexTwo];
+        stringArray[indexTwo] = temp;
 
-        // loop:
-            // look for the lowest number
-            // grab the word that contains the lowest number
-                // put it at the front of the queue
 
-    // print the queue starting from the beginning
+        wordList = Arrays.asList(stringArray);
 
+    }
 
     public static void main(String[] args) {
         Solution solution = new Solution();
@@ -103,8 +107,15 @@ public class Solution {
         // int test = solution.extractNumber("1000");
         // System.out.println(test);
 
-        solution.parseForWords("is2 Thi1s T4est 3a");
-        // parseForWords();
+        //solution.compute("is2 Thi1s T4est 3a");
+        solution.compute("Do100nt for2get 3the s1alt");
+
+
+        /** swap works **/
+        // test for swap
+        // String[] stringArray = {"This", "is", "a", "test"};
+        // solution.swap(stringArray, 2, 3);
+        // System.out.println(Arrays.toString(stringArray));
 
 
     }
