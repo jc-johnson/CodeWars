@@ -1,4 +1,4 @@
-package YourOrderPlease;
+package src.main.java.YourOrderPlease;
 
 /**
  * Created by Jordan on 4/24/2017.

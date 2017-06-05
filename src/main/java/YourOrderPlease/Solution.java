@@ -1,4 +1,4 @@
-package YourOrderPlease;
+package src.main.java.YourOrderPlease;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,11 +27,6 @@ public class Solution {
 
     public static String createFinalString(List<String> wordList) { // List<String>
         StringBuilder sb = new StringBuilder();
-        /*for (String string : wordList)
-        {
-            sb.append(string);
-            sb.append(" ");
-        }*/
         for (int i = 0; i < wordList.size(); i++) {
             if (i == wordList.size()-1) {
                 String string = wordList.get(i);
@@ -103,7 +98,7 @@ public class Solution {
 
         String ourString = stringBuilder.toString();
         Integer result = Integer.parseInt(ourString);
-        System.out.println(ourString);
+        // System.out.println(ourString);
 
         return result;
     }
