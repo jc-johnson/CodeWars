@@ -9,7 +9,7 @@ public class Solution {
         // if array is empty or null
         if (array == null) return 0;
 
-        // test
+        // test -
         Integer count = 0;
         String bee = "bee";
 
