@@ -20,7 +20,7 @@ public class Solution {
 
     public static void main(String[] args) {
 
-
+        // test
         int[] array = {0,1,2,6};
         int[] array1 = {};
         int[] array2 = {1,2,3};
