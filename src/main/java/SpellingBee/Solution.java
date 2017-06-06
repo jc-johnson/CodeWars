@@ -7,13 +7,14 @@ public class Solution {
 
     public static Integer parse2dArray(char[][] array){
         // if array is empty or null
+        if (array == null) return 0;
 
         Integer count = 0;
         String bee = "bee";
 
         char[][] tempArray = array;
         for (int i = 0; i < array.length ; i++) {
-            for (int j = 0; j < array.length; j++) {
+            for (int j = 0; j < array[i].length; j++) {
                 // if 2 spaces to the right are free -- check to the right
                 if (j < array[i].length-2) {
                     StringBuilder stringBuilder = new StringBuilder();
@@ -93,6 +94,9 @@ public class Solution {
         Integer count = Solution.parse2dArray(testArray);
         System.out.println(count);
 
+        char[][] testArray2 = {{'b','e','e','b'},{'.','b','e','e'},{'.','.','.','e'}};
+        Integer count2 = Solution.parse2dArray(testArray2);
+        System.out.println(count2);
 
 
         char[][] array = {{'a','b','c'}, {'e','f','g','z'}, {'h','i','j'}};
