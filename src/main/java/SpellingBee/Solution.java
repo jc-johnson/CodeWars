@@ -5,16 +5,56 @@ package src.main.java.SpellingBee;
  */
 public class Solution {
 
-    public static void parse2dArray(char[][] array){
+    public static Integer parse2dArray(char[][] array){
+        // if array is empty or null
+
         Integer count = 0;
         String bee = "bee";
 
         char[][] tempArray = array;
         for (int i = 0; i < array.length ; i++) {
             for (int j = 0; j < array.length; j++) {
+                // if 2 spaces to the right are free -- check to the right
+                if (j < array[i].length-2) {
+                    StringBuilder stringBuilder = new StringBuilder();
+                    stringBuilder.append(array[i][j]);
+                    stringBuilder.append(array[i][j+1]);
+                    stringBuilder.append(array[i][j+2]);
+                    String currentString = stringBuilder.toString();
+                    if (currentString.equals(bee)) count += 1;
+                }
+                // check to the left
+                if (j > 1) {
+                    StringBuilder stringBuilder = new StringBuilder();
+                    stringBuilder.append(array[i][j]);
+                    stringBuilder.append(array[i][j-1]);
+                    stringBuilder.append(array[i][j-2]);
+                    String currentString = stringBuilder.toString();
+                    if (currentString.equals(bee)) count += 1;
+
+                }
+                // check above
+                if (i > 1) {
+                    StringBuilder stringBuilder = new StringBuilder();
+                    stringBuilder.append(array[i][j]);
+                    stringBuilder.append(array[i-1][j]);
+                    stringBuilder.append(array[i-2][j]);
+                    String currentString = stringBuilder.toString();
+                    if (currentString.equals(bee)) count += 1;
+                }
+                // check below
+                if (i < array.length - 2) {
+                    StringBuilder stringBuilder = new StringBuilder();
+                    stringBuilder.append(array[i][j]);
+                    stringBuilder.append(array[i+1][j]);
+                    stringBuilder.append(array[i+2][j]);
+                    String currentString = stringBuilder.toString();
+                    if (currentString.equals(bee)) count += 1;
+                }
 
             }
         }
+        return count;
     }
 
     // for each cell in 2d array
@@ -48,8 +88,20 @@ public class Solution {
 
 
     public static void main(String[] args) {
-        char[][] array = {{'a','b','c'}, {'e','f','g'}, {'h','i','j'}};
+
+        char[][] testArray = {{'b','e','e'}, {'b','e','e'}, {'.','.','.'}};
+        Integer count = Solution.parse2dArray(testArray);
+        System.out.println(count);
+
+
+
+        char[][] array = {{'a','b','c'}, {'e','f','g','z'}, {'h','i','j'}};
         Solution.print2dArray(array);
+
+        // 2d array tests
+        System.out.println("Array length " + array.length);
+        System.out.println("array[0].length " + array[0].length);
+        System.out.println("array[1].length " + array[1].length);
     }
 }
 
