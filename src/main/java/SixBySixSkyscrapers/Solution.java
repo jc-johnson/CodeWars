@@ -48,6 +48,11 @@ public class Solution {
         return false;
     }
 
+    // swap elements in 2d array
+    public static int swap(int[][] array, int row1, int col1, int row2, int col2) {
+        return 0;
+    }
+
     public static void main(String[] args) {
 
         int[][] duplicateArray = {{1, 5, 0}, {2, 3, 4}, {5, 6, 7}};
