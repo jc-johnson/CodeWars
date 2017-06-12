@@ -1,0 +1,12 @@
+
+<-- brute force-->
+function divisibleCount(x, y, k) {
+   //code me
+   var count = 0;
+
+   for (i = x; i <= y; i++) {
+      if (i % k === 0) count++;
+   }
+
+   return count;
+}
