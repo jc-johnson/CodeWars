@@ -15,7 +15,7 @@ function divisibleCount(x, y, k) {
 function divisibleCount (x, y, k) {
 
     var low = getHigherDivisible(x, k);
-    var high = getLowerDevisible(y, k);
+    var high = getLowerDivisible(y, k);
 
     var totalDivisible = high - low;
     var total = totalDivisible / k;
@@ -30,7 +30,7 @@ function getHigherDivisible(x, k) {
     return temp;
 }
 
-function getLowerDevisible(x, k) {
+function getLowerDivisible(x, k) {
     var temp = x;
     while (temp % k != 0) {
         temp--;

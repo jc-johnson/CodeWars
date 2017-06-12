@@ -11,7 +11,7 @@ public class Solution {
         // get greatest number less than or equal to y divisible by k
 
         int low = getHigherDivisible(x, k);
-        int high = getLowerDevisible(y, k);
+        int high = getLowerDivisible(y, k);
 
         // subtract low from high
         // divide by k
@@ -30,7 +30,7 @@ public class Solution {
         return temp;
     }
 
-    public static int getLowerDevisible(int x, int k) {
+    public static int getLowerDivisible(int x, int k) {
         int temp = x;
         // find divisible number
         while (temp % k != 0) {
