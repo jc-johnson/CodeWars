@@ -1,0 +1,28 @@
+function getCount(str) {
+  var vowelsCount = 0;
+
+  // enter your majic here
+  for (i = 0; i < str.length; i++) {
+    if (isVowel(str.charAt(i))) vowelsCount++;
+  }
+
+  return vowelsCount;
+}
+
+function isVowel(char) {
+
+  switch(char) {
+    case 'a':
+      return true;
+    case 'e':
+      return true;
+    case 'i':
+      return true;
+    case 'o':
+      return true;
+    case 'u':
+      return true;
+    default:
+      return false;
+  }
+}
