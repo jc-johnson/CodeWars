@@ -1,0 +1,8 @@
+function isTriangle(a,b,c)
+{
+  var value = true;
+  if (a + b <= c) value = false;
+  if (b + c <= a) value = false;
+  if (c + a <= b) value = false;
+  return value;
+}
