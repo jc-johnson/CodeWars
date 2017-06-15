@@ -24,20 +24,24 @@ function yellowBeGone(colorNameOrCode) {
       var hex3 = colorNameOrCode.substring(5,7);
       // console.log(hex3);
 
-      hex1 = computeDecimalFromHex(hex1);
-      hex2 = computeDecimalFromHex(hex2);
-      hex3 = computeDecimalFromHex(hex3);
+      hexDec1 = computeDecimalFromHex(hex1);
+      hexDec2 = computeDecimalFromHex(hex2);
+      hexDec3 = computeDecimalFromHex(hex3);
 
       console.log(hex1);
       console.log(hex2);
       console.log(hex3);
 
-      // get largest hex value
-      // create new string
-      // add largest hex value
-      // add 2nd largest hex value
-      // add lowest hex value
+      var finalString = "#";
+      var hexArray = orderHexArray(hexDec1, hexDec2, hexDec3);
 
+      for (i = 0; i < hexArray.length; i++) {
+        // convert each back to hex
+        var newHex = hexArray[i].toString(16);
+        finalString += newHex;
+      }
+
+      return finalString;
 
     }
 
@@ -54,6 +58,23 @@ function containsNumber(colorNameOrCode) {
 function computeDecimalFromHex(hex) {
   // console.log(hex.toString(16));
   return parseInt(hex, 16);
+}
+
+function orderHexArray(hex1, hex2, hex3) {
+  var hexArray = [hex1, hex2, hex3];
+  var temp = 0;
+
+  for (i = 0; i < hexArray.length; i++) {
+    for (j = 0; j < i; j++) {
+      if (hexArray[i] > hexArray[j]) {
+        temp = hexArray[i];
+        hexArray[i] = hexArray[j];
+        hexArray[j] = temp;
+      }
+    }
+  }
+
+  return hexArray;
 }
 
 
