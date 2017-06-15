@@ -94,5 +94,6 @@ public class Solution {
 
         System.out.println("Pythagorean distance: " + getDistance(0, 11, 1, 2));
         System.out.println("Pythagorean distance: " + getDistance(0, 11, 5, 2));
+
     }
 }
