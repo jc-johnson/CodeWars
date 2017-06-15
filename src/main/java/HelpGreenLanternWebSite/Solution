@@ -1,0 +1,61 @@
+function yellowBeGone(colorNameOrCode) {
+
+    var isCode = containsNumber(colorNameOrCode);
+
+    if (!isCode) {
+      var colorName = colorNameOrCode.toLowerCase();
+
+      switch (colorName) {
+        case "gold": return "ForestGreen";
+        case "khaki": return "LimeGreen";
+        case "lemonchiffon": return "PaleGreen";
+        case "lightgoldenrodyellow": return "SpringGreen";
+        case "lightyellow": return "MintCream";
+        case "palegoldenrod": return "LightGreen";
+        case "yellow": return "Lime";
+      }
+    }
+
+    else if (isCode) {
+      var hex1 = colorNameOrCode.substring(1,3);
+      // console.log(hex1);
+      var hex2 = colorNameOrCode.substring(3,5);
+      // console.log(hex2);
+      var hex3 = colorNameOrCode.substring(5,7);
+      // console.log(hex3);
+
+      hex1 = computeDecimalFromHex(hex1);
+      hex2 = computeDecimalFromHex(hex2);
+      hex3 = computeDecimalFromHex(hex3);
+
+      console.log(hex1);
+      console.log(hex2);
+      console.log(hex3);
+
+      // get largest hex value
+      // create new string
+      // add largest hex value
+      // add 2nd largest hex value
+      // add lowest hex value
+
+
+    }
+
+
+    return colorNameOrCode;
+}
+
+function containsNumber(colorNameOrCode) {
+  var digitMatches = colorNameOrCode.match(/\d+/g);
+  if (digitMatches != null) return true;
+  return false;
+}
+
+function computeDecimalFromHex(hex) {
+  // console.log(hex.toString(16));
+  return parseInt(hex, 16);
+}
+
+
+
+
