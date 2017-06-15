@@ -1,0 +1,43 @@
+function choreAssignment(chores) {
+ //code here
+ var array = chores;
+
+ // first sort the array
+ array = sort(array);
+
+ var solutionArray = [];
+
+ var i = 0;
+ var j = array.length-1;
+
+ while (j > i) {
+   var sum = 0;
+   sum = array[i] + array[j];
+   solutionArray[i] = sum;
+   i++;
+   j--;
+ }
+ return sort(solutionArray);
+}
+
+function swap(array, index1, index2) {
+  var temp = array[index1];
+  array[index1] = array[index2];
+  array[index2] = temp;
+  return array;
+}
+
+function sort(array) {
+  var i = 0;
+  var j = array.length-1;
+
+  for (i = 0; i < array.length; i++) {
+   for (j = 0; j < i; j++){
+     if (array[i] < array[j]) {
+       array = swap(array, i, j);
+     }
+   }
+  }
+
+  return array;
+}
