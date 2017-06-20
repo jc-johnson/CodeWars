@@ -14,20 +14,20 @@ public class Solution {
         String inputString = input;// input.toLowerCase();
 
         String reg =  "(?<![a-z0-9])you+(?![a-z0-9])";
-        String reg2 = "(?<![a-z0-9])u+(?![a-z0-9])";
+        String reg2 = "(?<![a-z0-9])u(?![a-z0-9])";
         String reg3 = "(?<![a-z0-9])You+(?![a-z0-9])";
 
         Pattern pattern = Pattern.compile(reg);
         Matcher matcher = pattern.matcher(inputString);
         if (matcher.find()) {
-            return matcher.replaceAll("your sister");
+            inputString = matcher.replaceAll("your sister");
             // return inputString.replaceAll("you+\\W", "your sister");
         }
 
         pattern = Pattern.compile(reg3);
         matcher = pattern.matcher(inputString);
         if (matcher.find()) {
-            return matcher.replaceAll("your sister");
+            inputString = matcher.replaceAll("your sister");
             // return inputString.replaceAll("you+\\W", "your sister");
         }
 
@@ -35,10 +35,10 @@ public class Solution {
         pattern = Pattern.compile(reg2);
         matcher = pattern.matcher(inputString);
         if (matcher.find()) {
-            return matcher.replaceAll("your sister");
+            inputString = matcher.replaceAll("your sister");
         }
 
-        return input; // "corrected" input
+        return inputString; // "corrected" input
     }
 
     public static void main(String[] args) {
