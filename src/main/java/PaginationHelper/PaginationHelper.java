@@ -9,7 +9,6 @@ public class PaginationHelper<I> {
 
     private List<I> collection;
     private int itemsPerPage;
-
     private Map<Integer, List<I>> pages = new HashMap<>();
 
     /**
@@ -77,39 +76,42 @@ public class PaginationHelper<I> {
 
     private void buildLists(){
 
-        List<I> list = new ArrayList<>();
         Integer pageNumber = 1;
+        List<I> list = new ArrayList<I>();
 
         for (int i = 0; i < this.collection.size(); i++) {
-
             if (list.size() < this.itemsPerPage) {
                 list.add(this.collection.get(i));
             }
 
             // list is full
             else {
-                // System.out.format("Page %d:", pageNumber);
-                // System.out.println(Arrays.toString(list.toArray()));
-
+                System.out.format("Page %d:", pageNumber);
+                System.out.println(Arrays.toString(list.toArray()));
 
                 // page item length has reached its maximum limit -- start with new list
-                this.pages.put(pageNumber, list);
+                pages.put(pageNumber, list);
                 pageNumber++;
-                list.clear();
+                // list.clear();
+                list = new ArrayList<I>();
                 list.add(this.collection.get(i)); // still need to add current value after starting a new list
                 //printPages();
+
             }
         }
         // print and save out remainder values
-        this.pages.put(pageNumber, list);
-        //System.out.format("Page %d:", pageNumber);
-        //System.out.println(Arrays.toString(list.toArray()));
+        pages.put(pageNumber, list);
+       //System.out.format("Page %d:", pageNumber);
+       //System.out.println(Arrays.toString(list.toArray()));
     }
 
     private void printPages() {
         for (Map.Entry<Integer, List<I>> entry : pages.entrySet()) {
             System.out.println("Page Number: " + entry.getKey());
-            System.out.println(Arrays.toString(entry.getValue().toArray()));
+            // System.out.println(Arrays.toString(entry.getValue().toArray()));
+            for (I i : entry.getValue()) {
+                System.out.println(i);
+            }
         }
     }
 
@@ -118,6 +120,7 @@ public class PaginationHelper<I> {
         PaginationHelper paginationHelper = new PaginationHelper(Arrays.asList(1, 3, 5, 6, 4, 2, 6), 2);
         paginationHelper.buildLists();
         paginationHelper.printPages();
+
 
         // PaginationHelper paginationHelper2 = new PaginationHelper(Arrays.asList(2, 3, 5, 2, 2, 6, 3, 3), 3);
         // paginationHelper2.buildLists();
