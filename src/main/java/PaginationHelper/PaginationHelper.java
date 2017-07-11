@@ -20,7 +20,7 @@ public class PaginationHelper<I> {
     public PaginationHelper(List<I> collection, int itemsPerPage) {
         this.collection = collection;
         this.itemsPerPage = itemsPerPage;
-        buildPages();
+
     }
 
     /**
@@ -78,35 +78,43 @@ public class PaginationHelper<I> {
         return 0;
     }
 
-    private void buildPages() {
-        int pageCounter = 1;
-        int pages = 0;
-        List<I> currentPageItems = new ArrayList<>();
+    private void buildLists(){
 
-        /* TODO: Needs work
-        for (I : this.collection) {
-            for (int i = 0; i < pageCount ; i++) {
-                for (int j = 1; j <= itemsPerPage ; j++) {
-                    currentPageItems.add(this.collection.get())
-                }
-                this.pages.put(i, currentPageItems);
-            }
-        }
-
+        List<I> list = new ArrayList<>();
+        int pageNumber = 1;
 
         for (int i = 0; i < this.collection.size(); i++) {
-            for (int j = 0; j < pageCount; j++) {
-                for (int k = 0; k < itemsPerPage; k++) {
-                    currentPageItems.add(this.collection.get(i));
-                }
-                this.pages.put(i, currentPageItems);
+
+            if (list.size() < this.itemsPerPage) {
+                list.add(this.collection.get(i));
             }
+
+            else {
+                System.out.format("Page %d:", pageNumber);
+                pageNumber++;
+                System.out.println(Arrays.toString(list.toArray()));
+
+                // page item length has reached its maximum limit -- start with new list
+                list.clear();
+                list.add(this.collection.get(i)); // still need to add current value after starting a new list
+            }
+
         }
-        */
+        // print out remainder values
+        System.out.format("Page %d:", pageNumber);
+        System.out.println(Arrays.toString(list.toArray()));
     }
+
+
 
     public static void main(String[] args) {
         PaginationHelper paginationHelper = new PaginationHelper(Arrays.asList(1, 3, 5, 6, 4, 2, 6), 2);
-        System.out.println(paginationHelper.pageCount());
+        paginationHelper.buildLists();
+
+        PaginationHelper paginationHelper2 = new PaginationHelper(Arrays.asList(2, 3, 5, 2, 2, 6, 3, 3), 3);
+        paginationHelper2.buildLists();
+
+        PaginationHelper paginationHelper3 = new PaginationHelper(Arrays.asList(1), 1);
+        paginationHelper3.buildLists();
     }
 }
