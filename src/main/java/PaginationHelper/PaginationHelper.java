@@ -9,7 +9,6 @@ public class PaginationHelper<I> {
 
     private List<I> collection;
     private int itemsPerPage;
-    private int pageCount ;
 
     private Map<Integer, List<I>> pages = new HashMap<>();
 
@@ -20,7 +19,6 @@ public class PaginationHelper<I> {
     public PaginationHelper(List<I> collection, int itemsPerPage) {
         this.collection = collection;
         this.itemsPerPage = itemsPerPage;
-
     }
 
     /**
@@ -49,7 +47,6 @@ public class PaginationHelper<I> {
             pageCounter++;
         }
         pages++;    // for remainder items
-        this.pageCount = pages;
         return pages;
     }
 
@@ -81,7 +78,7 @@ public class PaginationHelper<I> {
     private void buildLists(){
 
         List<I> list = new ArrayList<>();
-        int pageNumber = 1;
+        Integer pageNumber = 1;
 
         for (int i = 0; i < this.collection.size(); i++) {
 
@@ -89,32 +86,44 @@ public class PaginationHelper<I> {
                 list.add(this.collection.get(i));
             }
 
+            // list is full
             else {
-                System.out.format("Page %d:", pageNumber);
-                pageNumber++;
-                System.out.println(Arrays.toString(list.toArray()));
+                // System.out.format("Page %d:", pageNumber);
+                // System.out.println(Arrays.toString(list.toArray()));
+
 
                 // page item length has reached its maximum limit -- start with new list
+                this.pages.put(pageNumber, list);
+                pageNumber++;
                 list.clear();
                 list.add(this.collection.get(i)); // still need to add current value after starting a new list
+                //printPages();
             }
-
         }
-        // print out remainder values
-        System.out.format("Page %d:", pageNumber);
-        System.out.println(Arrays.toString(list.toArray()));
+        // print and save out remainder values
+        this.pages.put(pageNumber, list);
+        //System.out.format("Page %d:", pageNumber);
+        //System.out.println(Arrays.toString(list.toArray()));
     }
 
+    private void printPages() {
+        for (Map.Entry<Integer, List<I>> entry : pages.entrySet()) {
+            System.out.println("Page Number: " + entry.getKey());
+            System.out.println(Arrays.toString(entry.getValue().toArray()));
+        }
+    }
 
 
     public static void main(String[] args) {
         PaginationHelper paginationHelper = new PaginationHelper(Arrays.asList(1, 3, 5, 6, 4, 2, 6), 2);
         paginationHelper.buildLists();
+        paginationHelper.printPages();
 
-        PaginationHelper paginationHelper2 = new PaginationHelper(Arrays.asList(2, 3, 5, 2, 2, 6, 3, 3), 3);
-        paginationHelper2.buildLists();
+        // PaginationHelper paginationHelper2 = new PaginationHelper(Arrays.asList(2, 3, 5, 2, 2, 6, 3, 3), 3);
+        // paginationHelper2.buildLists();
 
-        PaginationHelper paginationHelper3 = new PaginationHelper(Arrays.asList(1), 1);
-        paginationHelper3.buildLists();
+        // PaginationHelper paginationHelper3 = new PaginationHelper(Arrays.asList(1), 1);
+
+        // paginationHelper3.buildLists();
     }
 }
