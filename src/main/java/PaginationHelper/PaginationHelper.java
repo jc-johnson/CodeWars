@@ -26,10 +26,7 @@ public class PaginationHelper<I> {
      * returns the number of items within the entire collection
      */
     public int itemCount() {
-
         return collection.size();
-
-
 
     }
 
@@ -48,7 +45,13 @@ public class PaginationHelper<I> {
 
         if (pageIndex >= pages.size() || pageIndex < 0 || collection == null) return -1;
 
-        return pages.get(pageIndex).size();
+        int i = 0;
+        for (Map.Entry<Integer, List<Integer>> entry : pages.entrySet()) {
+            if (i == pageIndex) return entry.getValue().size();
+            i++;
+        }
+
+        return 0;
     }
 
     /**
@@ -57,7 +60,7 @@ public class PaginationHelper<I> {
      */
     public int pageIndex(int itemIndex) {
         // itemIndex is out of value range
-        if (itemIndex < 0 || collection == null || !collection.contains(itemIndex)) return -1;
+        if ( collection == null || collection.isEmpty() || (!collection.contains(itemIndex))) return -1;
         int index = 0;
 
         for (Map.Entry<Integer, List<Integer>> entry : pages.entrySet()) {
@@ -68,8 +71,6 @@ public class PaginationHelper<I> {
             }
             index++;
         }
-
-
         return 0;
     }
 
@@ -97,7 +98,6 @@ public class PaginationHelper<I> {
                 list = new ArrayList<Integer>();
                 list.add((Integer) this.collection.get(i)); // still need to add current value after starting a new list
                 //printPages();
-
             }
         }
         // print and save out remainder values
@@ -151,6 +151,8 @@ public class PaginationHelper<I> {
         System.out.println(helper.pageIndex(-15));
         System.out.println("");
         System.out.println(helper.itemCount());
+        System.out.println("");
+        System.out.println(helper.pageItemCount(0));
 
 
         // PaginationHelper paginationHelper2 = new PaginationHelper(Arrays.asList(2, 3, 5, 2, 2, 6, 3, 3), 3);
