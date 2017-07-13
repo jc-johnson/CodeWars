@@ -109,7 +109,6 @@ public class PaginationHelper<I> {
     private void printPages() {
         for (Map.Entry<Integer, List<Integer>> entry : pages.entrySet()) {
             System.out.println("Page Number: " + entry.getKey());
-            // System.out.println(Arrays.toString(entry.getValue().toArray()));
             for (Integer i : entry.getValue()) {
                 System.out.println(i);
             }
