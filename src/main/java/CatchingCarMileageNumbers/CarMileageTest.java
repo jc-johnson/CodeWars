@@ -46,5 +46,17 @@ public class CarMileageTest {
         assertEquals(true, CarMileage.digitIsPalinDrome(1234321));
     }
 
+    @Test
+    public void testDigitIsInAwesomePhrases() {
+        assertEquals(true, CarMileage.digitIsInAwesomePhrases(121, new int[]{121, 111, 23, 5}));
+        assertEquals(false, CarMileage.digitIsInAwesomePhrases(1, new int[]{2, 44, 3}));
+    }
+
+    @Test
+    public void testNumberLength() {
+        assertEquals(3, CarMileage.numberLength(123));
+        assertEquals(4, CarMileage.numberLength(1222));
+    }
+
 
 }

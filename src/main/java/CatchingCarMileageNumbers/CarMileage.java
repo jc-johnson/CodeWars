@@ -1,5 +1,8 @@
 package src.main.java.CatchingCarMileageNumbers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Jordan on 8/22/2017.
  */
@@ -16,9 +19,8 @@ public class CarMileage {
         }
 
         if (numberIsInteresting(number, awesomePhrases)) return INTERESTING;
-        else if (isInNextTwoMiles(number)) return NEXT_TWO_MILES;
-        else if (numberIsNotInteresting(number)) return NOT_INTERESTING;
-        else return -1;
+        else if (isInNextTwoMiles(number, awesomePhrases)) return NEXT_TWO_MILES;
+        else return NOT_INTERESTING;
 
     }
 
@@ -117,13 +119,27 @@ public class CarMileage {
         return true;
     }
 
-    private static boolean digitIsInAwesomePhrases(int number, int[] phrases) {
+    public static boolean digitIsInAwesomePhrases(int number, int[] phrases) {
+
+        List<String> awesomePhrasesList = new ArrayList<>();
+
+        for (int i = 0; i < phrases.length; i++) {
+            String phrasesNumber = String.valueOf(phrases[i]);
+            awesomePhrasesList.add(phrasesNumber);
+        }
+
+        String numberString = String.valueOf(number);
+
+        if (awesomePhrasesList.contains(numberString)) return true;
+
         return false;
     }
 
-    private static boolean isInNextTwoMiles(int number) {
+    private static boolean isInNextTwoMiles(int number, int[] phrases) {
 
-
+        // if next two numbers higher or lower are interesting
+        if (numberIsInteresting(number++, phrases) || numberIsInteresting(number+2, phrases))
+            return true;
         return false;
     }
 
@@ -135,7 +151,8 @@ public class CarMileage {
 
     public static int numberLength(int number) {
 
-        return 0;
+        String numberString = String.valueOf(number);
+        return numberString.length();
     }
 
     public static void main(String[] args) {
