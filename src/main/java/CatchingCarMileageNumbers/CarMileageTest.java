@@ -25,6 +25,26 @@ public class CarMileageTest {
         assertEquals(true, CarMileage.everyDigitIsTheSame(0));
     }
 
+    @Test
+    public void testDigitIsIncrementing() {
+        assertEquals(false, CarMileage.digitIsIncrementing(12341));
+        assertEquals(true, CarMileage.digitIsIncrementing(1234));
+        // assertEquals(true, CarMileage.digitIsIncrementing(4321));
+    }
+
+    @Test
+    public void testDigitIsDecrementing() {
+        assertEquals(false, CarMileage.digitIsDecrementing(1234));
+        assertEquals(true, CarMileage.digitIsDecrementing(321));
+        assertEquals(true, CarMileage.digitIsDecrementing(3210));
+    }
+
+    @Test
+    public void testDigitIsPalinDrome() {
+        assertEquals(true, CarMileage.digitIsPalinDrome(121));
+        assertEquals(false, CarMileage.digitIsPalinDrome(1234));
+        assertEquals(true, CarMileage.digitIsPalinDrome(1234321));
+    }
 
 
 }

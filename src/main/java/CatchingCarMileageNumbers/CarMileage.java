@@ -47,7 +47,15 @@ public class CarMileage {
 
         char numberDigit = numberString.charAt(0);
 
+        final char ZERO = '0';
+        final String ZER0_VALUE = "10";
+
+
         for (int i = 1; i < numberString.length(); i++) {
+            if (numberString.charAt(i) == 0) {
+
+            }
+
             if (numberString.charAt(i) != numberDigit) {
                 return false;
             }
@@ -56,16 +64,57 @@ public class CarMileage {
         return true;
     }
 
-    private static boolean digitIsIncrementing(int number) {
-        return false;
+    public static boolean digitIsIncrementing(int number) {
+
+        String numberString = String.valueOf(number);
+
+        for (int i = 1; i < numberString.length(); i++) {
+            if (numberString.charAt(i) < numberString.charAt(i-1)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
-    private static boolean digitIsDecrementing(int number) {
-        return false;
+    public static boolean digitIsDecrementing(int number) {
+
+        String numberString = String.valueOf(number);
+
+        for (int i = 1; i < numberString.length(); i++) {
+            if (numberString.charAt(i) > numberString.charAt(i-1)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
-    private static boolean digitIsPalinDrome(int number) {
-        return false;
+    public static boolean digitIsPalinDrome(int number) {
+
+        String numberString = String.valueOf(number);
+
+        if (numberString.length() % 2 == 0) {
+            int j = numberString.length()-1;
+            for (int i = 0; i < numberString.length()/2; i++) {
+                if (numberString.charAt(i) != numberString.charAt(j)) {
+                    return false;
+                }
+                j--;
+            }
+        }
+
+        if (numberString.length() % 3 == 0) {
+            int j = numberString.length()-1;
+            for (int i = 0; i < numberString.length()/2; i++) {
+                if (numberString.charAt(i) != numberString.charAt(j)) {
+                    return false;
+                }
+                j--;
+            }
+        }
+
+        return true;
     }
 
     private static boolean digitIsInAwesomePhrases(int number, int[] phrases) {
