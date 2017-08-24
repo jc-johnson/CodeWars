@@ -11,7 +11,7 @@ public class CarMileage {
 
     public static int isInteresting(int number, int[] awesomePhrases) {
 
-        if (awesomePhrases == null || awesomePhrases.size() == 0) {
+        if (awesomePhrases == null || awesomePhrases.length == 0) {
             return -1;
         }
 
@@ -22,10 +22,10 @@ public class CarMileage {
 
     }
 
-    private static boolean numberIsInteresting(int number, int[] awesomePhrases) {
+    public static boolean numberIsInteresting(int number, int[] awesomePhrases) {
 
-        if (awesomePhrases == null || awesomePhrases.size() == 0) {
-            throw new DataInputException();
+        if (awesomePhrases == null || awesomePhrases.length == 0) {
+            // throw new DataInputException();
         }
 
         if (number >= 0 && number <= 1000000000) {
@@ -33,32 +33,43 @@ public class CarMileage {
                 if (everyDigitIsTheSame(number))return true;
                 if (digitIsIncrementing(number) || digitIsDecrementing(number)) return true;
                 if (digitIsPalinDrome(number)) return true;
-                if (digitIsInAwesomePhrases(number)) return true;
+                if (digitIsInAwesomePhrases(number, awesomePhrases)) return true;
             }
         } else {
-            throw new InputOutOfBoundsException();
+            // throw new InputOutOfBoundsException();
         }
         return false;
     }
 
-    private static boolean everyDigitIsTheSame(int number) {
+    public static boolean everyDigitIsTheSame(int number) {
 
+        String numberString = String.valueOf(number);
+
+        char numberDigit = numberString.charAt(0);
+
+        for (int i = 1; i < numberString.length(); i++) {
+            if (numberString.charAt(i) != numberDigit) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     private static boolean digitIsIncrementing(int number) {
-
+        return false;
     }
 
     private static boolean digitIsDecrementing(int number) {
-
+        return false;
     }
 
     private static boolean digitIsPalinDrome(int number) {
-
+        return false;
     }
 
     private static boolean digitIsInAwesomePhrases(int number, int[] phrases) {
-
+        return false;
     }
 
     private static boolean isInNextTwoMiles(int number) {
@@ -73,4 +84,13 @@ public class CarMileage {
 
     }
 
-}}
+    public static int numberLength(int number) {
+
+        return 0;
+    }
+
+    public static void main(String[] args) {
+
+    }
+
+}
