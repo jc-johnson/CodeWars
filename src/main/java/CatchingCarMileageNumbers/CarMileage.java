@@ -68,7 +68,54 @@ public class CarMileage {
 
     public static boolean digitIsIncrementing(int number) {
 
+        // if number contains 0
+            // if subarray before 0 is incrementing
+
+            // if subarray after 0 is incrementing
+
+
+
         String numberString = String.valueOf(number);
+
+        // base case
+        if (numberString.length() == 1) return true;
+
+        if (numberString.contains(Character.toString('0'))) {
+            int indexOfZero = numberString.indexOf('0'); // index of first 0
+
+            // '0' should never be first digit
+            /*
+            // '0' is first digit
+            if (indexOfZero == 0) {
+
+                // see if digits to the right of 0 are in order
+
+                // create new digit string
+                int numberSubstring = Integer.parseInt(numberString.substring(indexOfZero));
+
+                // if digits to right of 0 are incrementing then whole digit isn't incrementing1
+                if (digitIsIncrementing(numberSubstring)) {
+                    return false;
+                }
+            }*/
+
+            // '0' is last digit
+            if (indexOfZero == numberString.length()-1) {
+                int numberSubstring = Integer.parseInt(numberString.substring(0, indexOfZero));
+                if (digitIsIncrementing(numberSubstring)) {
+                    return true;
+                }
+            }
+
+            // '0' is in middle
+            if (indexOfZero > 0) {
+                if (everyDigitIsTheSame(number)) return true;
+                else return false;
+            }
+
+            return false;
+
+        }
 
         for (int i = 1; i < numberString.length(); i++) {
             if (numberString.charAt(i) < numberString.charAt(i-1)) {
@@ -81,8 +128,43 @@ public class CarMileage {
 
     public static boolean digitIsDecrementing(int number) {
 
+        // if number contains 0
+            // if subarray before 0 is decrementing
+
+            // if subarray after 0 is decrementing
+
+
         String numberString = String.valueOf(number);
 
+        // base case
+        if (numberString.length() == 1) return true;
+
+        if (numberString.contains(Character.toString('0'))) {
+            int indexOfZero = numberString.indexOf('0'); // index of first 0 -- should never be first digit
+
+            // '0' is last digit
+            if (indexOfZero == numberString.length()-1) {
+                int numberSubstring = Integer.parseInt(numberString.substring(0, indexOfZero));
+                if (digitIsDecrementing(numberSubstring)) {
+                    return false;
+                }
+            }
+
+            // '0' is in middle
+            if (indexOfZero > 0) {
+                if (everyDigitIsTheSame(number)) return true;
+                else return false;
+            }
+
+            return false;
+        }
+
+        if (numberString.contains(Character.toString('0'))) {
+            int indexOfZero = numberString.indexOf('0'); // index of first 0
+
+        }
+
+        // general case to test proper order of digits
         for (int i = 1; i < numberString.length(); i++) {
             if (numberString.charAt(i) > numberString.charAt(i-1)) {
                 return false;
