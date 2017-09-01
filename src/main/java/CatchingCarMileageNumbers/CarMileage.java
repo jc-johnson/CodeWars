@@ -15,7 +15,7 @@ public class CarMileage {
     public static int isInteresting(int number, int[] awesomePhrases) {
 
         if (awesomePhrases == null || awesomePhrases.length == 0) {
-            return -1;
+            return 1;
         }
 
         if (numberIsInteresting(number, awesomePhrases)) return INTERESTING;
@@ -84,20 +84,6 @@ public class CarMileage {
             int indexOfZero = numberString.indexOf('0'); // index of first 0
 
             // '0' should never be first digit
-            /*
-            // '0' is first digit
-            if (indexOfZero == 0) {
-
-                // see if digits to the right of 0 are in order
-
-                // create new digit string
-                int numberSubstring = Integer.parseInt(numberString.substring(indexOfZero));
-
-                // if digits to right of 0 are incrementing then whole digit isn't incrementing1
-                if (digitIsIncrementing(numberSubstring)) {
-                    return false;
-                }
-            }*/
 
             // '0' is last digit
             if (indexOfZero == numberString.length()-1) {
@@ -178,27 +164,30 @@ public class CarMileage {
 
         String numberString = String.valueOf(number);
 
-        if (numberString.length() % 2 == 0) {
-            int j = numberString.length()-1;
-            for (int i = 0; i < numberString.length()/2; i++) {
-                if (numberString.charAt(i) != numberString.charAt(j)) {
-                    return false;
-                }
-                j--;
+        int j = numberString.length()-1;
+        for (int i = 0; i < numberString.length()/2; i++) {
+            if (numberString.charAt(i) != numberString.charAt(j)) {
+                return false;
             }
+            j--;
         }
-
-        if (numberString.length() % 3 == 0) {
-            int j = numberString.length()-1;
-            for (int i = 0; i < numberString.length()/2; i++) {
-                if (numberString.charAt(i) != numberString.charAt(j)) {
-                    return false;
-                }
-                j--;
-            }
-        }
-
         return true;
+
+        // even number of digits
+        //if (numberString.length() % 2 == 0) {}
+
+        // odd number of digits
+        /*
+        else {
+            int j = numberString.length()-1;
+            for (int i = 0; i < numberString.length()/2; i++) {
+                if (numberString.charAt(i) != numberString.charAt(j)) {
+                    return false;
+                }
+                j--;
+            }
+            return true;
+        }*/
     }
 
     public static boolean digitIsInAwesomePhrases(int number, int[] phrases) {
@@ -220,15 +209,9 @@ public class CarMileage {
     private static boolean isInNextTwoMiles(int number, int[] phrases) {
 
         // if next two numbers higher or lower are interesting
-        if (numberIsInteresting(number++, phrases) || numberIsInteresting(number+2, phrases))
+        if (numberIsInteresting(number+1, phrases) || numberIsInteresting(number+2, phrases))
             return true;
         return false;
-    }
-
-    private static boolean numberIsNotInteresting(int number) {
-
-        return false;
-
     }
 
     public static int numberLength(int number) {
