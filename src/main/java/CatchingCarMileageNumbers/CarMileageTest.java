@@ -84,5 +84,12 @@ public class CarMileageTest {
         assertEquals(1, CarMileage.isInteresting(1336, new int[]{1337, 256}));
     }
 
+    @Test
+    public void testBoringNumber() {
+        assertEquals(0, CarMileage.isInteresting(-1, new int[]{23, 44}));
+        assertEquals(0, CarMileage.isInteresting(23, new int[]{144, 225}));
+
+    }
+
 
 }

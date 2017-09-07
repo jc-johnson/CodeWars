@@ -103,8 +103,9 @@ public class CarMileage {
 
         }
 
+
         for (int i = 1; i < numberString.length(); i++) {
-            if (numberString.charAt(i) < numberString.charAt(i-1)) {
+            if (numberString.charAt(i) <= numberString.charAt(i-1)) {
                 return false;
             }
         }
@@ -152,7 +153,7 @@ public class CarMileage {
 
         // general case to test proper order of digits
         for (int i = 1; i < numberString.length(); i++) {
-            if (numberString.charAt(i) > numberString.charAt(i-1)) {
+            if (numberString.charAt(i) >= numberString.charAt(i-1)) {
                 return false;
             }
         }
