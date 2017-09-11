@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4be33b83-3ad8-42b1-96e2-aa1b9509b553" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/DetectPanagram/SolutionTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CodeWars/.idea/workspace.xml" afterPath="$PROJECT_DIR$/out/production/CodeWars/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/CatchingCarMileageNumbers/CarMileage.java" afterPath="$PROJECT_DIR$/src/main/java/CatchingCarMileageNumbers/CarMileage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/CatchingCarMileageNumbers/CarMileageTest.java" afterPath="$PROJECT_DIR$/src/main/java/CatchingCarMileageNumbers/CarMileageTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/DetectPanagram/Solution.java" afterPath="$PROJECT_DIR$/src/main/java/DetectPanagram/Solution.java" />
     </list>
     <ignored path="CodeWars.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,10 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CarMileage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CarMileage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CatchingCarMileageNumbers/CarMileage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
+            <state relative-caret-position="595">
               <caret line="214" column="21" selection-start-line="214" selection-start-column="21" selection-end-line="214" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -42,14 +42,39 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DetectPanagram/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SolutionTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DetectPanagram/SolutionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="25" column="87" selection-start-line="25" selection-start-column="87" selection-end-line="25" selection-end-column="87" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CarMileageTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CatchingCarMileageNumbers/CarMileageTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
+            <state relative-caret-position="1394">
               <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
               <folding>
-                <element signature="e#2619#2620#0" expanded="true" />
-                <element signature="e#2704#2705#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#2219#2220#0" expanded="false" />
+                <element signature="e#2305#2306#0" expanded="false" />
+                <element signature="e#2358#2359#0" expanded="false" />
+                <element signature="e#2444#2445#0" expanded="false" />
+                <element signature="e#2488#2489#0" expanded="false" />
+                <element signature="e#2570#2571#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -60,8 +85,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -86,6 +111,8 @@
         <option value="$PROJECT_DIR$/src/main/java/CatchingCarMileageNumbers/test.java" />
         <option value="$PROJECT_DIR$/src/main/java/CatchingCarMileageNumbers/CarMileage.java" />
         <option value="$PROJECT_DIR$/src/main/java/CatchingCarMileageNumbers/CarMileageTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DetectPanagram/SolutionTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DetectPanagram/Solution.java" />
       </list>
     </option>
   </component>
@@ -120,8 +147,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -190,13 +218,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CatchingCarMileageNumbers" />
+              <option name="myItemId" value="DetectPanagram" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -210,6 +237,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="src.main.java.DetectPanagram" />
       <recent name="src.main.java.CatchingCarMileageNumbers" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -217,79 +245,7 @@
       <recent name="groovy.util.GroovyTestCase" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CarMileageTest.testBoringNumber">
-    <configuration default="false" name="CarMileageTest.testAlmostAwesome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="src.main.java.CatchingCarMileageNumbers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="CodeWars" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="src.main.java.CatchingCarMileageNumbers" />
-      <option name="MAIN_CLASS_NAME" value="src.main.java.CatchingCarMileageNumbers.CarMileageTest" />
-      <option name="METHOD_NAME" value="testAlmostAwesome" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="src.main.java.CatchingCarMileageNumbers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="src.main.java.CatchingCarMileageNumbers.test" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="CodeWars" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="CarMileageTest.testDigitIsIncrementing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="src.main.java.CatchingCarMileageNumbers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="CodeWars" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="src.main.java.CatchingCarMileageNumbers" />
-      <option name="MAIN_CLASS_NAME" value="src.main.java.CatchingCarMileageNumbers.CarMileageTest" />
-      <option name="METHOD_NAME" value="testDigitIsIncrementing" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.SolutionTest.checkPass">
     <configuration default="false" name="CarMileageTest.testDigitIsDecrementing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -329,6 +285,84 @@
       <option name="PACKAGE_NAME" value="src.main.java.CatchingCarMileageNumbers" />
       <option name="MAIN_CLASS_NAME" value="src.main.java.CatchingCarMileageNumbers.CarMileageTest" />
       <option name="METHOD_NAME" value="testBoringNumber" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SolutionTest.check" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="src.main.java.DetectPanagram.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="CodeWars" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="src.main.java.DetectPanagram" />
+      <option name="MAIN_CLASS_NAME" value="src.main.java.DetectPanagram.SolutionTest" />
+      <option name="METHOD_NAME" value="check" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SolutionTest.checkFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="src.main.java.DetectPanagram.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="CodeWars" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="src.main.java.DetectPanagram" />
+      <option name="MAIN_CLASS_NAME" value="src.main.java.DetectPanagram.SolutionTest" />
+      <option name="METHOD_NAME" value="checkFail" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="SolutionTest.checkPass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="src.main.java.DetectPanagram.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="CodeWars" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="src.main.java.DetectPanagram" />
+      <option name="MAIN_CLASS_NAME" value="src.main.java.DetectPanagram.SolutionTest" />
+      <option name="METHOD_NAME" value="checkPass" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -577,19 +611,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.CarMileageTest.testAlmostAwesome" />
-      <item index="1" class="java.lang.String" itemvalue="Application.test" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.CarMileageTest.testDigitIsIncrementing" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.CarMileageTest.testDigitIsDecrementing" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.CarMileageTest.testBoringNumber" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.CarMileageTest.testDigitIsDecrementing" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.CarMileageTest.testBoringNumber" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SolutionTest.check" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.SolutionTest.checkFail" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.SolutionTest.checkPass" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.CarMileageTest.testBoringNumber" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.CarMileageTest.testDigitIsDecrementing" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.CarMileageTest.testAlmostAwesome" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.CarMileageTest.testDigitIsIncrementing" />
-        <item index="4" class="java.lang.String" itemvalue="Application.test" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SolutionTest.checkPass" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SolutionTest.checkFail" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SolutionTest.check" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.CarMileageTest.testBoringNumber" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.CarMileageTest.testDigitIsDecrementing" />
       </list>
     </recent_temporary>
   </component>
@@ -642,19 +676,24 @@
       <option name="project" value="LOCAL" />
       <updated>1504293974955</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fixing incrementing and decrementing logic">
+      <created>1504802260366</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1504802260367</updated>
+    </task>
+    <task id="LOCAL-00007" summary="initial setup&#10;">
+      <created>1505094095521</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1505094095521</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CarMileageTest_testAlmostAwesome - 2017.09.07 at 09h 17m 14s.xml">
-      <configuration name="CarMileageTest.testAlmostAwesome" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CarMileageTest_testAlmostAwesome - 2017.09.07 at 09h 20m 59s.xml">
-      <configuration name="CarMileageTest.testAlmostAwesome" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CarMileageTest_testBoringNumber - 2017.09.07 at 09h 27m 56s.xml">
-      <configuration name="CarMileageTest.testBoringNumber" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CarMileageTest_testBoringNumber - 2017.09.07 at 09h 28m 35s.xml">
       <configuration name="CarMileageTest.testBoringNumber" configurationId="JUnit" />
     </history-entry>
@@ -675,6 +714,15 @@
     </history-entry>
     <history-entry file="CarMileageTest_testDigitIsIncrementing - 2017.09.07 at 09h 20m 49s.xml">
       <configuration name="CarMileageTest.testDigitIsIncrementing" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SolutionTest_check - 2017.09.10 at 18h 49m 20s.xml">
+      <configuration name="SolutionTest.check" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SolutionTest_checkFail - 2017.09.10 at 18h 51m 09s.xml">
+      <configuration name="SolutionTest.checkFail" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SolutionTest_checkPass - 2017.09.10 at 18h 51m 44s.xml">
+      <configuration name="SolutionTest.checkPass" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -718,7 +766,9 @@
     <MESSAGE value="finished test cases -- only have to add increment and decrement contingencies" />
     <MESSAGE value="proper incrementing and decrementing functionality" />
     <MESSAGE value="update commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="update commit" />
+    <MESSAGE value="fixing incrementing and decrementing logic" />
+    <MESSAGE value="initial setup&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial setup&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -779,21 +829,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CatchingCarMileageNumbers/test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CatchingCarMileageNumbers/CarMileageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        <state relative-caret-position="1394">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding>
-            <element signature="e#2619#2620#0" expanded="true" />
-            <element signature="e#2704#2705#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2219#2220#0" expanded="false" />
+            <element signature="e#2305#2306#0" expanded="false" />
+            <element signature="e#2358#2359#0" expanded="false" />
+            <element signature="e#2444#2445#0" expanded="false" />
+            <element signature="e#2488#2489#0" expanded="false" />
+            <element signature="e#2570#2571#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -812,7 +859,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -821,8 +867,13 @@
         <state relative-caret-position="1275">
           <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding>
-            <element signature="e#2619#2620#0" expanded="true" />
-            <element signature="e#2704#2705#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2219#2220#0" expanded="false" />
+            <element signature="e#2305#2306#0" expanded="false" />
+            <element signature="e#2358#2359#0" expanded="false" />
+            <element signature="e#2444#2445#0" expanded="false" />
+            <element signature="e#2488#2489#0" expanded="false" />
+            <element signature="e#2570#2571#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -841,7 +892,39 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CatchingCarMileageNumbers/CarMileageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2219#2220#0" expanded="false" />
+            <element signature="e#2305#2306#0" expanded="false" />
+            <element signature="e#2358#2359#0" expanded="false" />
+            <element signature="e#2444#2445#0" expanded="false" />
+            <element signature="e#2488#2489#0" expanded="false" />
+            <element signature="e#2570#2571#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CatchingCarMileageNumbers/CarMileage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CatchingCarMileageNumbers/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -850,8 +933,13 @@
         <state relative-caret-position="1411">
           <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding>
-            <element signature="e#2619#2620#0" expanded="true" />
-            <element signature="e#2704#2705#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2219#2220#0" expanded="false" />
+            <element signature="e#2305#2306#0" expanded="false" />
+            <element signature="e#2358#2359#0" expanded="false" />
+            <element signature="e#2444#2445#0" expanded="false" />
+            <element signature="e#2488#2489#0" expanded="false" />
+            <element signature="e#2570#2571#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -870,7 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -879,8 +966,13 @@
         <state relative-caret-position="1411">
           <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding>
-            <element signature="e#2619#2620#0" expanded="true" />
-            <element signature="e#2704#2705#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2219#2220#0" expanded="false" />
+            <element signature="e#2305#2306#0" expanded="false" />
+            <element signature="e#2358#2359#0" expanded="false" />
+            <element signature="e#2444#2445#0" expanded="false" />
+            <element signature="e#2488#2489#0" expanded="false" />
+            <element signature="e#2570#2571#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -900,8 +992,13 @@
         <state relative-caret-position="1411">
           <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding>
-            <element signature="e#2619#2620#0" expanded="true" />
-            <element signature="e#2704#2705#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2219#2220#0" expanded="false" />
+            <element signature="e#2305#2306#0" expanded="false" />
+            <element signature="e#2358#2359#0" expanded="false" />
+            <element signature="e#2444#2445#0" expanded="false" />
+            <element signature="e#2488#2489#0" expanded="false" />
+            <element signature="e#2570#2571#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -921,8 +1018,13 @@
         <state relative-caret-position="935">
           <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
           <folding>
-            <element signature="e#2619#2620#0" expanded="true" />
-            <element signature="e#2704#2705#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2219#2220#0" expanded="false" />
+            <element signature="e#2305#2306#0" expanded="false" />
+            <element signature="e#2358#2359#0" expanded="false" />
+            <element signature="e#2444#2445#0" expanded="false" />
+            <element signature="e#2488#2489#0" expanded="false" />
+            <element signature="e#2570#2571#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -942,8 +1044,13 @@
         <state relative-caret-position="935">
           <caret line="57" column="55" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
           <folding>
-            <element signature="e#2619#2620#0" expanded="true" />
-            <element signature="e#2704#2705#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2219#2220#0" expanded="false" />
+            <element signature="e#2305#2306#0" expanded="false" />
+            <element signature="e#2358#2359#0" expanded="false" />
+            <element signature="e#2444#2445#0" expanded="false" />
+            <element signature="e#2488#2489#0" expanded="false" />
+            <element signature="e#2570#2571#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -974,28 +1081,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CatchingCarMileageNumbers/CarMileageTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
+        <state relative-caret-position="1394">
           <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding>
-            <element signature="e#2619#2620#0" expanded="true" />
-            <element signature="e#2704#2705#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2219#2220#0" expanded="false" />
+            <element signature="e#2305#2306#0" expanded="false" />
+            <element signature="e#2358#2359#0" expanded="false" />
+            <element signature="e#2444#2445#0" expanded="false" />
+            <element signature="e#2488#2489#0" expanded="false" />
+            <element signature="e#2570#2571#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CatchingCarMileageNumbers/CarMileage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="595">
           <caret line="214" column="21" selection-start-line="214" selection-start-column="21" selection-end-line="214" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DetectPanagram/SolutionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" column="87" selection-start-line="25" selection-start-column="87" selection-end-line="25" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DetectPanagram/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
