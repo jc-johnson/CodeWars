@@ -1,0 +1,27 @@
+def consecutiveNumbers(array):
+
+    # convert array into ints
+    array = [int(x) for x in array]
+    array.sort()
+
+    intList = list()
+
+    listLen = len(array) - 1
+
+    for i in range(0, listLen):
+        k = array[i] + 1
+        next = array[i+1]
+        if (k < next):
+            while (k < next):
+                intList.append(k)
+                k += 1
+    # print(intList)
+    return len(intList)
+
+
+def main():
+    array = [4, 8, 6]
+    consecutiveNumbers(array)
+
+if __name__ == "__main__":
+    main()
