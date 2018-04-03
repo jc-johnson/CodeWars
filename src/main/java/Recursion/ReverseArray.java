@@ -1,5 +1,6 @@
 package src.main.java.Recursion;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class ReverseArray {
@@ -12,7 +13,10 @@ public class ReverseArray {
 
     public static void reverse(int[] array, int index1, int index2) {
 
-        if (array.length == 1) return;
+        if (array.length == 1) {
+            System.out.println(Arrays.toString(array ));
+            return;
+        }
 
         if (array.length == 2) {
             swap(array, index1, index2);
@@ -61,5 +65,11 @@ public class ReverseArray {
 
         int[] array2 = {1, 2, 3, 4};
         reverse(array2);
+
+        int[] array3 = {9};
+        reverse(array3);
+
+        int[] array4 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        reverse(array4);
     }
 }
