@@ -12,11 +12,14 @@ public class Solution {
         while(digit < upperLimit){
 
             StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.append(n);
-            stringBuilder.append(j);
-            String intString = stringBuilder.toString();
-            digit = Integer.parseInt(intString);
-            System.out.println(digit);
+            if(j - n <= maxDifference) {
+                stringBuilder.append(n);
+                stringBuilder.append(j);
+                String intString = stringBuilder.toString();
+                digit = Integer.parseInt(intString);
+                System.out.println(digit);
+            }
+
             j++;
 
             if (j >= 10) {
@@ -28,6 +31,6 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        sel_number(30, 0);
+        sel_number(30, 2);
     }
 }
